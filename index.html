@@ -1,0 +1,1174 @@
+<!-- /*
+* Template Name: Sterial
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="author" content="Reliable Travels">
+	<link rel="shortcut icon" href="images/reliable_travel.jpeg">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;700&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		.cta-button a {
+			background: linear-gradient(135deg, #f6ad3c 0%, #e59a2b 100%);
+			color: #fff !important;
+			padding: 12px 28px;
+			border-radius: 30px;
+			font-weight: 600;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(246, 173, 60, 0.3);
+			letter-spacing: 0.5px;
+		}
+
+		.cta-button a:hover {
+			background: linear-gradient(135deg, #e59a2b 0%, #d48920 100%);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(246, 173, 60, 0.4);
+		}
+
+		.cta-button a:active {
+			transform: translateY(0);
+		}
+
+		/* Destination Slider Image Fixes */
+		.destination .thumb {
+			width: 100%;
+			height: 350px;
+			overflow: hidden;
+			border-radius: 8px;
+		}
+
+		.destination .thumb img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		/* CTA Section Before Footer */
+		.bg-primary {
+			background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+		}
+
+		.btn-outline-white {
+			border: 2px solid #fff;
+			color: #fff;
+			padding: 12px 32px;
+			border-radius: 30px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+		}
+
+		.btn-outline-white:hover {
+			background: #fff;
+			color: #2c3e50;
+			transform: translateY(-2px);
+			box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+		}
+
+		/* Instagram Icon Fix */
+		.site-footer .social li a {
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			width: 40px !important;
+			height: 40px !important;
+			border-radius: 50% !important;
+			background: rgba(246, 173, 60, 0.1) !important;
+			border: 2px solid #f6ad3c !important;
+			transition: all 0.3s ease !important;
+		}
+
+		.site-footer .social li a:hover {
+			background: #f6ad3c !important;
+			transform: scale(1.1) !important;
+		}
+
+		.site-footer .social li a span {
+			font-size: 18px !important;
+			color: #f6ad3c !important;
+		}
+
+		.site-footer .social li a:hover span {
+			color: #fff !important;
+		}
+
+		/* WhatsApp Floating Button */
+		.whatsapp-float {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 30px;
+			right: 30px;
+			background-color: #25d366;
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+			z-index: 1000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+			text-decoration: none;
+		}
+
+		.whatsapp-float:hover {
+			background-color: #128c7e;
+			transform: scale(1.1);
+			box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+		}
+
+		.whatsapp-float i {
+			margin-top: 0;
+			color: #FFF;
+		}
+
+		@media (max-width: 768px) {
+			.whatsapp-float {
+				width: 50px;
+				height: 50px;
+				font-size: 26px;
+				bottom: 20px;
+				right: 20px;
+			}
+		}
+
+		/* Mobile Optimizations */
+		@media (max-width: 991px) {
+
+			/* Typography adjustments */
+			.heading {
+				font-size: 2rem !important;
+				line-height: 1.3 !important;
+			}
+
+			h2.heading {
+				font-size: 1.75rem !important;
+			}
+
+			h3 {
+				font-size: 1.25rem !important;
+			}
+
+			p {
+				font-size: 1rem !important;
+				line-height: 1.6 !important;
+			}
+
+			/* Hero section mobile */
+			.hero {
+				min-height: 500px !important;
+				padding: 60px 0 !important;
+			}
+
+			.hero .heading {
+				font-size: 1.75rem !important;
+				margin-bottom: 1rem !important;
+			}
+
+			/* Navigation mobile */
+			.site-nav {
+				padding: 10px 0 !important;
+			}
+
+			.logo {
+				font-size: 1.25rem !important;
+			}
+
+			.cta-button a {
+				padding: 10px 20px !important;
+				font-size: 0.9rem !important;
+			}
+
+			/* Sections spacing */
+			.section {
+				padding: 3rem 0 !important;
+			}
+
+			.section-2,
+			.section-3 {
+				padding: 3rem 0 !important;
+			}
+
+			/* Images responsive */
+			.image-stack {
+				margin-bottom: 2rem !important;
+			}
+
+			img {
+				max-width: 100% !important;
+				height: auto !important;
+			}
+
+			/* Service cards mobile */
+			.service-1 {
+				margin-bottom: 2rem !important;
+				padding: 1.5rem !important;
+			}
+
+			.service-1 .icon {
+				width: 50px !important;
+				height: 50px !important;
+			}
+
+			/* Hide service descriptions on mobile */
+			.service-1 p {
+				display: none !important;
+			}
+
+			/* Center service titles */
+			.service-1 h3 {
+				text-align: center !important;
+				margin-top: 10px !important;
+			}
+
+			.service-1 {
+				text-align: center !important;
+			}
+
+			/* Center "Our Services" heading and content */
+			.heading-content {
+				text-align: center !important;
+			}
+
+			.heading-content h2 {
+				text-align: center !important;
+			}
+
+			.heading-content p {
+				display: none !important;
+			}
+
+			.heading-content .btn {
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+
+			/* Buttons mobile */
+			.btn {
+				padding: 12px 24px !important;
+				font-size: 0.95rem !important;
+				width: 100% !important;
+				margin-bottom: 1rem !important;
+			}
+
+			.btn-primary,
+			.btn-outline-white {
+				display: block !important;
+				text-align: center !important;
+			}
+
+			/* Testimonials mobile */
+			.block-testimonial {
+				padding: 2rem 1rem !important;
+			}
+
+			.block-testimonial p {
+				font-size: 1rem !important;
+			}
+
+			/* Accordion mobile */
+			.accordion-item {
+				margin-bottom: 1rem !important;
+			}
+
+			.accordion-button {
+				padding: 1rem !important;
+				font-size: 1rem !important;
+			}
+
+			/* Instagram feed mobile */
+			.instagram-feed-wrapper iframe {
+				height: 600px !important;
+			}
+
+			/* Footer mobile */
+			.site-footer {
+				padding: 2rem 0 1rem !important;
+			}
+
+			.site-footer .widget {
+				margin-bottom: 2rem !important;
+			}
+
+			.site-footer .widget h3 {
+				font-size: 1.1rem !important;
+				margin-bottom: 0.75rem !important;
+			}
+
+			.site-footer .widget p,
+			.site-footer .widget address,
+			.site-footer .widget li {
+				font-size: 0.9rem !important;
+				line-height: 1.5 !important;
+				margin-bottom: 0.5rem !important;
+			}
+
+			.site-footer .col-lg-4,
+			.site-footer .col-lg-2,
+			.site-footer .col-lg-3 {
+				margin-bottom: 1.5rem !important;
+			}
+
+			.site-footer .social {
+				margin-top: 0.5rem !important;
+			}
+
+			.site-footer .social li {
+				margin-right: 10px !important;
+			}
+
+			.site-footer .links li {
+				margin-bottom: 0.5rem !important;
+			}
+
+			.site-footer .row.mt-5 {
+				margin-top: 2rem !important;
+				padding-top: 1.5rem !important;
+				border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+			}
+
+			.site-footer .row.mt-5 p {
+				font-size: 0.85rem !important;
+			}
+
+			/* Destination slider mobile */
+			.destination {
+				margin-bottom: 1.5rem !important;
+			}
+
+			.destination .thumb {
+				height: 280px !important;
+			}
+
+			.destination .thumb img {
+				height: 100% !important;
+				object-fit: cover !important;
+			}
+
+			/* Mobile menu improvements */
+			.site-mobile-menu {
+				width: 100% !important;
+			}
+
+			.site-mobile-menu-body {
+				padding: 2rem 1rem !important;
+			}
+
+			/* Container padding mobile */
+			.container {
+				padding-left: 20px !important;
+				padding-right: 20px !important;
+			}
+
+			/* CTA section mobile */
+			.bg-primary.py-5 {
+				padding: 2rem 0 !important;
+			}
+
+			.bg-primary h3 {
+				font-size: 1.25rem !important;
+				margin-bottom: 1.5rem !important;
+			}
+
+			/* Prevent horizontal scroll */
+			body {
+				overflow-x: hidden !important;
+			}
+
+			.row {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+
+			/* Touch-friendly spacing */
+			a,
+			button {
+				min-height: 44px !important;
+				display: inline-flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+			}
+		}
+
+		@media (max-width: 576px) {
+
+			/* Extra small devices */
+			.heading {
+				font-size: 1.5rem !important;
+			}
+
+			h2.heading {
+				font-size: 1.4rem !important;
+			}
+
+			.hero {
+				min-height: 400px !important;
+			}
+
+			.section {
+				padding: 2rem 0 !important;
+			}
+
+			.container {
+				padding-left: 15px !important;
+				padding-right: 15px !important;
+			}
+
+			.cta-button a {
+				padding: 10px 18px !important;
+				font-size: 0.85rem !important;
+			}
+
+			.destination .thumb {
+				height: 220px !important;
+			}
+		}
+	</style>
+
+	<title>Reliable Travels &mdash; Travels Agency </title>
+</head>
+
+<body>
+
+	<!-- WhatsApp Floating Button -->
+	<a href="https://wa.me/27655730557" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+		aria-label="Chat on WhatsApp">
+		<i class="icon-whatsapp"></i>
+	</a>
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav mt-3">
+		<div class="container">
+
+			<div class="site-navigation">
+				<div class="row">
+					<div class="col-6 col-lg-3">
+						<a href="index.html" class="logo m-0 float-start">Reliable Travels</a>
+					</div>
+					<div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
+						<ul class="js-clone-nav  text-center site-menu p-0 m-0">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About us</a></li>
+							<li class="has-children">
+								<a href="#">Umrah</a>
+								<ul class="dropdown">
+									<li><a href="resources.html">Resources</a></li>
+								</ul>
+							</li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="blog.html">Destinations</a></li>
+
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 text-lg-end">
+						<ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu ">
+							<li class="cta-button"><a href="contact.html">Contact Us</a></li>
+						</ul>
+
+						<a href="#"
+							class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+							data-toggle="collapse" data-target="#main-navbar">
+							<span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+
+
+	<div class="hero overlay">
+
+		<div class="img-bg rellax">
+			<img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+		</div>
+
+		<div class="container">
+			<div class="row align-items-center justify-content-start">
+				<div class="col-lg-5">
+
+					<h1 class="heading" data-aos="fade-up">It's a Big World Out There, Go Explore</h1>
+					<p class="mb-5" data-aos="fade-up">Discover breathtaking destinations and create unforgettable
+						memories — let Reliable Travel guide you to the world's most inspiring places with thoughtful
+						service and expert care.</p>
+
+					<div data-aos="fade-up">
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<div class="section section-2">
+		<div class="container">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
+					<div class="image-stack mb-5 mb-lg-0">
+						<div class="image-stack__item image-stack__item--bottom" data-aos="fade-up">
+							<img src="images/img_v_1.jpg" alt="Image" class="img-fluid rellax ">
+						</div>
+						<div class="image-stack__item image-stack__item--top" data-aos="fade-up" data-aos-delay="100"
+							data-rellax-percentage="0.5">
+							<img src="images/pexels-sayed-abdullah-tafhim-2147792704-29865666.jpg" alt="Image"
+								class="img-fluid">
+						</div>
+					</div>
+
+				</div>
+				<div class="col-lg-4 order-lg-1">
+
+					<div>
+						<h2 class="heading mb-3" data-aos="fade-up" data-aos-delay="100">Explore All Corners of The
+							World With Us</h2>
+
+						<p data-aos="fade-up" data-aos-delay="200">At Reliable Travels, we believe every journey should
+							be extraordinary. Whether you're seeking spiritual enlightenment through Umrah, dreaming of
+							exotic destinations, or planning your next adventure, we're here to turn your travel
+							aspirations into unforgettable experiences.</p>
+
+						<p data-aos="fade-up" data-aos-delay="300">With years of expertise and a passion for exceptional
+							service, we curate personalized travel experiences that go beyond the ordinary. From
+							seamless booking to dedicated on-ground support, we handle every detail so you can focus on
+							creating memories that last a lifetime.</p>
+
+						<p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="#"
+								class="btn btn-primary">Discover More</a></p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="section service-section-1">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 mb-4 mb-lg-0">
+					<div class="heading-content" data-aos="fade-up">
+						<h2>Our <span class="d-block">Services</span></h2>
+						<p>From spiritual journeys to dream vacations, we provide comprehensive travel solutions
+							tailored to your needs and budget.</p>
+						<p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="services.html"
+								class="btn btn-primary">View All</a></p>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="row">
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/01.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Umrah Packages</h3>
+									<p>Experience a spiritually enriching journey with our carefully crafted Umrah
+										packages, including flights, accommodation, and guided support.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/02.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Custom Tours</h3>
+									<p>Discover the world your way with personalized itineraries designed around your
+										interests, schedule, and travel style.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/03.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Travel Insurance</h3>
+									<p>Travel with confidence knowing you're protected. We offer comprehensive insurance
+										coverage for medical emergencies and trip cancellations.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="400">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/04.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Visa Assistance</h3>
+									<p>Navigate visa applications with ease. Our expert team provides guidance and
+										support throughout the entire visa process.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="section section-3" data-aos="fade-up" data-aos-delay="100">
+		<div class="container">
+			<div class="row align-items-center justify-content-between mb-5">
+				<div class="col-lg-5" data-aos="fade-up">
+					<h2 class="heading mb-3">Discover Amazing Travel Destinations</h2>
+					<p>From the spiritual heart of Makkah to the bustling streets of Dubai, serene beaches of Zanzibar
+						to the historic wonders of Istanbul — explore diverse destinations that inspire and transform.
+						Let us craft your perfect journey.</p>
+				</div>
+				<div class="col-lg-5 text-md-end" data-aos="fade-up" data-aos-delay="100">
+					<div id="destination-controls">
+						<span class="prev me-3" data-controls="prev">
+							<span class="icon-chevron-left"></span>
+						</span>
+						<span class="next" data-controls="next">
+							<span class="icon-chevron-right"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="destination-slider-wrap">
+			<div class="destination-slider">
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/Madina.jpg" alt="Makkah" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Makkah & Madinah</a></h3>
+						<span class="meta">Saudi Arabia</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/Dubai.jpg" alt="Dubai" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Dubai</a></h3>
+						<span class="meta">United Arab Emirates</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/Instanbul.jpg" alt="Istanbul" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Istanbul</a></h3>
+						<span class="meta">Turkey</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/Zanzibar.jpg" alt="Zanzibar" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Zanzibar</a></h3>
+						<span class="meta">Tanzania</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/cape town.jpg" alt="Cape Town" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Cape Town</a></h3>
+						<span class="meta">South Africa</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/mauritius.jpg" alt="Mauritius" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Mauritius</a></h3>
+						<span class="meta">Indian Ocean</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/bali.jpg" alt="Bali" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Bali</a></h3>
+						<span class="meta">Indonesia</span>
+					</div>
+				</div>
+
+				<div class="destination">
+					<div class="thumb">
+						<img src="images/marrakech.jpg" alt="Marrakech" class="img-fluid">
+					</div>
+					<div class="mt-4">
+						<h3><a href="#">Marrakech</a></h3>
+						<span class="meta">Morocco</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-5 mb-4 mb-lg-0 order-lg-2" data-aos="fade-up">
+					<img src="images/img-1.jpg" alt="Image" class="img-fluid">
+				</div>
+				<div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+					<h2 class="heading mb-4">Creating Unforgettable Travel Experiences</h2>
+					<p>At Reliable Travels, we don't just book trips — we create journeys that stay with you forever.
+						From the spiritual serenity of Umrah to exotic adventures across continents, every experience is
+						crafted with care and attention to detail.</p>
+					<p>Our dedicated team works tirelessly to ensure your travels are seamless, comfortable, and
+						memorable. With personalized itineraries, 24/7 support, and local expertise, we transform your
+						travel dreams into cherished memories that last a lifetime.</p>
+					<p class="my-4" data-aos="fade-up" data-aos-delay="200"><a href="about.html"
+							class="btn btn-primary">Learn More About Us</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section bg-light">
+
+		<h2 class="heading mb-5 text-center">What Our Clients Say</h2>
+
+		<div class="text-center mb-5">
+			<div id="prevnext-testimonial">
+				<span class="prev me-3" data-controls="prev">
+					<span class="icon-chevron-left"></span>
+				</span>
+				<span class="next" data-controls="next">
+					<span class="icon-chevron-right"></span>
+				</span>
+			</div>
+		</div>
+
+		<div class="wide-slider-testimonial-wrap">
+			<div class="wide-slider-testimonial">
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Anonymous</h3>
+							<p class="position mb-5">Estcourt</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;We recently traveled to Zanzibar and stayed at the Riu Palace, which exceeded our
+						expectations. The food was exceptional, and Reliable Travel made our journey entirely
+						stress-free. Their professionalism and attention to detail ensured a memorable
+						experience.&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Anonymous</h3>
+							<p class="position mb-5">Australia</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;Our recent trip to Mauritius was outstanding, thanks to Reliable Travel's exceptional
+						planning. They tailored a 5-night stay at Veranda Palmar to fit our budget, delivering an
+						unforgettable experience that surpassed our expectations.&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Yasser</h3>
+							<p class="position mb-5">Johannesburg</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;Reliable Travels expertly arranged our Turkey trip from start to finish, delivering a
+						stress-free experience at a cost significantly lower than anticipated. Their professionalism and
+						efficiency were truly impressive.&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Muhammad</h3>
+							<p class="position mb-5">Johannesburg</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;Nabeel is a reliable travels expert who made our trip seamless and stress-free. Highly
+						recommended!&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Ahmad</h3>
+							<p class="position mb-5">Durban</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;Reliable Travels exceeded our expectations with their efficient service and attention to
+						detail.&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Ayesha</h3>
+							<p class="position mb-5">Cape Town</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;Nabeel's expertise and reliability shine through in every aspect of travel planning. A
+						true legend in the industry!&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Nasiha</h3>
+							<p class="position mb-5">Johannesburg</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;Reliable Travels is the go-to agency for hassle-free travel planning. The Reliable team
+						delivers exceptional results.&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Fatima</h3>
+							<p class="position mb-5">Durban</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;Reliability, efficiency, and legendary customer service make Reliable Travels the perfect
+						partner for your next adventure.&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Anonymous</h3>
+							<p class="position mb-5">Family Trip</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;We were four families (12 people) who booked with Haajirah. With all families requiring
+						different travel dates and having debates among ourselves regarding hotels, Haajirah provided
+						multiple quotes within a few hours. She rose to the occasion and customized our trip to suit our
+						needs at a very reasonable price. While we were there, she was just a WhatsApp message away.
+						Reliable Travel truly lives up to its name!&rdquo;</p>
+					</blockquote>
+				</div>
+
+				<div class="item">
+					<blockquote class="block-testimonial">
+						<div class="author">
+							<h3>Anonymous</h3>
+							<p class="position mb-5">Satisfied Customer</p>
+						</div>
+						<p>
+						<div class="quote">&ldquo;</div>
+						&ldquo;We also used Haajirah for our accommodation this month, and Alhamdulillah, everything
+						went smoothly. Definitely recommend her if you're looking for accommodation.&rdquo;</p>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+
+	</div> <!-- /.section -->
+
+	<div class="section">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-lg-5 mb-4 mb-lg-0">
+					<img src="images/pexels-yahya-hbe-2149490834-35513896.jpg" alt="Image" class="img-fluid">
+				</div>
+				<div class="col-lg-5 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+					<h2 class="heading mb-5">Frequently Asked <br> Questions</h2>
+
+					<div class="custom-accordion" id="accordion_1">
+						<div class="accordion-item">
+							<h2 class="mb-0">
+								<button class="btn btn-link" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What
+									services does Reliable Travel offer?</button>
+							</h2>
+
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+								data-bs-parent="#accordion_1">
+								<div class="accordion-body">
+									We offer comprehensive travel services including Umrah packages, customized holiday
+									tours, flight bookings, hotel reservations, travel insurance, visa assistance, and
+									24/7 travel support. Our experienced team ensures every aspect of your journey is
+									handled with care and professionalism.
+								</div>
+							</div>
+						</div> <!-- .accordion-item -->
+
+						<div class="accordion-item">
+							<h2 class="mb-0">
+								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">How
+									do I book an Umrah package with Reliable Travel?</button>
+							</h2>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+								data-bs-parent="#accordion_1">
+								<div class="accordion-body">
+									Booking your Umrah package is simple. Contact us via phone, email, or WhatsApp with
+									your preferred travel dates and requirements. Our team will provide you with
+									multiple package options tailored to your budget and preferences. Once you've
+									selected a package, we'll guide you through the documentation and payment process.
+								</div>
+							</div>
+						</div> <!-- .accordion-item -->
+
+						<div class="accordion-item">
+							<h2 class="mb-0">
+								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseThree" aria-expanded="false"
+									aria-controls="collapseThree">What payment methods do you accept?</button>
+							</h2>
+
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordion_1">
+								<div class="accordion-body">
+									We accept various payment methods including bank transfers (EFT), credit/debit
+									cards, and cash payments at our office. Flexible payment plans are available for
+									certain packages. All transactions are secure, and you'll receive detailed invoices
+									and receipts for your records.
+								</div>
+							</div>
+
+						</div> <!-- .accordion-item -->
+
+						<div class="accordion-item">
+							<h2 class="mb-0">
+								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Do
+									you provide visa assistance?</button>
+							</h2>
+
+							<div id="collapseFour" class="collapse" aria-labelledby="headingThree"
+								data-bs-parent="#accordion_1">
+								<div class="accordion-body">
+									Yes, we provide comprehensive visa assistance for all destinations we serve. Our
+									team will guide you through the application process, help with documentation
+									requirements, and liaise with embassies on your behalf. We ensure your visa
+									application is accurate and submitted on time for a stress-free experience.
+								</div>
+							</div>
+
+						</div> <!-- .accordion-item -->
+
+						<div class="accordion-item">
+							<h2 class="mb-0">
+								<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#collapseFive" aria-expanded="false"
+									aria-controls="collapseFive">What is your cancellation policy?</button>
+							</h2>
+
+							<div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+								data-bs-parent="#accordion_1">
+								<div class="accordion-body">
+									Our cancellation policy varies depending on the package and destination. Generally,
+									cancellations made well in advance receive partial refunds, while last-minute
+									cancellations may incur penalties. We strongly recommend purchasing travel insurance
+									to protect against unforeseen circumstances. Contact us for specific terms related
+									to your booking.
+								</div>
+							</div>
+
+						</div> <!-- .accordion-item -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-12 text-center" data-aos="fade-up">
+					<h2 class="heading mb-3">Follow Our Journey on Instagram</h2>
+					<p>Stay connected with us on Instagram for travel inspiration, exclusive deals, and glimpses of our
+						clients' amazing adventures.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12" data-aos="fade-up" data-aos-delay="100">
+					<div class="instagram-feed-wrapper">
+						<iframe src="https://widgets.sociablekit.com/instagram-feed/iframe/25648438" frameborder="0"
+							width="100%" height="1000" style="border: none; overflow: hidden;"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="py-5 bg-primary">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 text-center mb-3 mb-lg-0 text-lg-start">
+						<h3 class="text-white m-0">Begin your adventurous journey here.</h3>
+					</div>
+					<div class="col-lg-5 text-center text-lg-end">
+						<a href="contact.html" class="btn btn-outline-white">Get started</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="site-footer">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="widget">
+							<h3>About Reliable Travels<span class="text-primary">.</span> </h3>
+							<p>Your trusted partner for unforgettable travel experiences. From spiritual Umrah journeys
+								to exotic destinations worldwide, we provide exceptional service and personalized care
+								for every traveler.</p>
+						</div> <!-- /.widget -->
+						<div class="widget">
+							<h3>Connect</h3>
+							<ul class="list-unstyled social">
+								<li><a href="https://www.instagram.com/reliable_travels/"><span
+											class="icon-instagram"></span></a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+					<div class="col-lg-2 ml-auto">
+						<div class="widget">
+							<h3>Links</h3>
+							<ul class="list-unstyled float-left links">
+								<li><a href="about.html">About us</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+					<div class="col-lg-2">
+						<div class="widget">
+							<h3>Company</h3>
+							<ul class="list-unstyled float-left links">
+								<li><a href="about.html">About us</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+
+					<div class="col-lg-3">
+						<div class="widget">
+							<h3>Contact</h3>
+							<ul class="list-unstyled links mb-4">
+								<address>101 Barkly Road, Gemdene, Kimberley,8301</address>
+								<li><a href="tel://+27655730557">+27 65 573 0557</a></li>
+								<li><a href="mailto:info@reliabletravel.co.za">info@reliabletravel.co.za</a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+				</div> <!-- /.row -->
+
+				<div class="row mt-5">
+					<div class="col-12 text-center">
+						<p class="mb-0">Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+							Designed by <a href="https://randpowerstate.co.za">RANDPOWERSTATE (PTY) LTD</a>
+						</p>
+					</div>
+				</div> <!-- /.container -->
+			</div> <!-- /.site-footer -->
+
+			<!-- Preloader -->
+			<div id="overlayer"></div>
+			<div class="loader">
+				<div class="spinner-border text-primary" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
+
+
+			<script src="js/bootstrap.bundle.min.js"></script>
+			<script src="js/tiny-slider.js"></script>
+			<script src="js/aos.js"></script>
+			<script src="js/navbar.js"></script>
+			<script src="js/counter.js"></script>
+			<script src="js/rellax.js"></script>
+			<script src="js/flatpickr.js"></script>
+			<script src="js/glightbox.min.js"></script>
+			<script src="js/custom.js"></script>
+</body>
+
+</html>

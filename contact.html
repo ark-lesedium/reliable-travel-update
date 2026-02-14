@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="author" content="Reliable Travels">
+	<link rel="shortcut icon" href="images/reliable_travel.jpeg">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;700&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		.cta-button a {
+			background: linear-gradient(135deg, #f6ad3c 0%, #e59a2b 100%);
+			color: #fff !important;
+			padding: 12px 28px;
+			border-radius: 30px;
+			font-weight: 600;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(246, 173, 60, 0.3);
+			letter-spacing: 0.5px;
+		}
+
+		.cta-button a:hover {
+			background: linear-gradient(135deg, #e59a2b 0%, #d48920 100%);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(246, 173, 60, 0.4);
+		}
+
+		.cta-button a:active {
+			transform: translateY(0);
+		}
+
+		/* Instagram Icon Fix */
+		.site-footer .social li a {
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			width: 40px !important;
+			height: 40px !important;
+			border-radius: 50% !important;
+			background: rgba(246, 173, 60, 0.1) !important;
+			border: 2px solid #f6ad3c !important;
+			transition: all 0.3s ease !important;
+		}
+
+		.site-footer .social li a:hover {
+			background: #f6ad3c !important;
+			transform: scale(1.1) !important;
+		}
+
+		.site-footer .social li a span {
+			font-size: 18px !important;
+			color: #f6ad3c !important;
+		}
+
+		.site-footer .social li a:hover span {
+			color: #fff !important;
+		}
+
+		/* WhatsApp Floating Button */
+		.whatsapp-float {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 30px;
+			right: 30px;
+			background-color: #25d366;
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+			z-index: 1000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+			text-decoration: none;
+		}
+
+		.whatsapp-float:hover {
+			background-color: #128c7e;
+			transform: scale(1.1);
+			box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+		}
+
+		.whatsapp-float i {
+			margin-top: 0;
+			color: #FFF;
+		}
+
+		@media (max-width: 768px) {
+			.whatsapp-float {
+				width: 50px;
+				height: 50px;
+				font-size: 26px;
+				bottom: 20px;
+				right: 20px;
+			}
+		}
+
+		/* Mobile Optimizations */
+		@media (max-width: 991px) {
+			.heading {
+				font-size: 2rem !important;
+				line-height: 1.3 !important;
+			}
+
+			h2.heading {
+				font-size: 1.75rem !important;
+			}
+
+			h3 {
+				font-size: 1.25rem !important;
+			}
+
+			p {
+				font-size: 1rem !important;
+				line-height: 1.6 !important;
+			}
+
+			.hero {
+				min-height: 500px !important;
+				padding: 60px 0 !important;
+			}
+
+			.site-nav {
+				padding: 10px 0 !important;
+			}
+
+			.logo {
+				font-size: 1.25rem !important;
+			}
+
+			.cta-button a {
+				padding: 10px 20px !important;
+				font-size: 0.9rem !important;
+			}
+
+			.section {
+				padding: 3rem 0 !important;
+			}
+
+			img {
+				max-width: 100% !important;
+				height: auto !important;
+			}
+
+			.form-control {
+				font-size: 1rem !important;
+				padding: 12px !important;
+			}
+
+			.btn {
+				padding: 12px 24px !important;
+				font-size: 0.95rem !important;
+				width: 100% !important;
+			}
+
+			.site-footer {
+				padding: 2rem 0 1rem !important;
+			}
+
+			.site-footer .widget {
+				margin-bottom: 2rem !important;
+			}
+
+			.site-footer .widget h3 {
+				font-size: 1.1rem !important;
+				margin-bottom: 0.75rem !important;
+			}
+
+			.site-footer .widget p,
+			.site-footer .widget address,
+			.site-footer .widget li {
+				font-size: 0.9rem !important;
+				line-height: 1.5 !important;
+				margin-bottom: 0.5rem !important;
+			}
+
+			.site-footer .col-lg-4,
+			.site-footer .col-lg-2,
+			.site-footer .col-lg-3 {
+				margin-bottom: 1.5rem !important;
+			}
+
+			.site-footer ul.list-unstyled.social li,
+			.site-footer ul.list-unstyled.links li {
+				margin-bottom: 0.5rem !important;
+			}
+
+			.site-footer ul.list-unstyled.social li a,
+			.site-footer ul.list-unstyled.links li a {
+				font-size: 0.9rem !important;
+				padding: 0.25rem 0 !important;
+			}
+
+			.site-footer .row.mt-5 {
+				margin-top: 2rem !important;
+				padding-top: 1rem !important;
+				border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+			}
+
+			.site-footer .copyright p {
+				font-size: 0.85rem !important;
+				margin-bottom: 0.5rem !important;
+			}
+
+			.container {
+				padding-left: 20px !important;
+				padding-right: 20px !important;
+			}
+
+			body {
+				overflow-x: hidden !important;
+			}
+
+			.row {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.heading {
+				font-size: 1.5rem !important;
+			}
+
+			h2.heading {
+				font-size: 1.4rem !important;
+			}
+
+			.section {
+				padding: 2rem 0 !important;
+			}
+
+			.container {
+				padding-left: 15px !important;
+				padding-right: 15px !important;
+			}
+		}
+	</style>
+
+	<title>Reliable Travels &mdash; Travels Agency </title>
+</head>
+
+<body>
+
+	<!-- WhatsApp Floating Button -->
+	<a href="https://wa.me/27655730557" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+		aria-label="Chat on WhatsApp">
+		<i class="icon-whatsapp"></i>
+	</a>
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav mt-3">
+		<div class="container">
+
+			<div class="site-navigation">
+				<div class="row">
+					<div class="col-6 col-lg-3">
+						<a href="index.html" class="logo m-0 float-start">Reliable Travel</a>
+					</div>
+					<div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
+						<ul class="js-clone-nav  text-center site-menu p-0 m-0">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About us</a></li>
+							<li class="has-children">
+								<a href="#">Umrah</a>
+								<ul class="dropdown">
+									<li><a href="resources.html">Resources</a></li>
+								</ul>
+							</li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="blog.html">Destinations</a></li>
+
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 text-lg-end">
+						<ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu ">
+							<li class="cta-button"><a href="contact.html">Contact Us</a></li>
+						</ul>
+
+						<a href="#"
+							class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+							data-toggle="collapse" data-target="#main-navbar">
+							<span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+
+
+	<div class="hero overlay">
+		<div class="img-bg rellax">
+			<img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+		</div>
+		<div class="container">
+			<div class="row align-items-center justify-content-start">
+				<div class="col-lg-6 mx-auto text-center">
+					<h1 class="heading" data-aos="fade-up">Contact</h1>
+					<p data-aos="fade-up">We're here to help you plan your perfect journey. Whether you have questions
+						about our Umrah packages, need travel advice, or want to book your next adventure, our dedicated
+						team is ready to assist you.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12" data-aos="fade-up" data-aos-delay="0">
+
+					<h2 class="heading mb-5">Get In Touch</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+					<div class="contact-info">
+
+						<div class="address mt-4">
+							<i class="icon-room"></i>
+							<h4 class="mb-2">Location:</h4>
+							<p>101 Barkly Road, Gemdene, Kimberley, 8301</p>
+						</div>
+
+						<div class="open-hours mt-4">
+							<i class="icon-clock-o"></i>
+							<h4 class="mb-2">Open Hours:</h4>
+							<p>
+								Mon-Friday:<br>
+								08:00 AM - 11:00 PM <br>
+								Sat-Sunday:<br>
+								08:00 AM - 1:00 PM
+							</p>
+						</div>
+
+						<div class="email mt-4">
+							<i class="icon-envelope"></i>
+							<h4 class="mb-2">Email:</h4>
+							<p>info@reliabletravel.co.za</p>
+						</div>
+
+						<div class="phone mt-4">
+							<i class="icon-phone"></i>
+							<h4 class="mb-2">Call:</h4>
+							<p>+27 65 573 0557</p>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+					<form action="https://formspree.io/f/xkgvnkgv" method="POST">
+						<div class="row">
+							<div class="col-6 mb-3">
+								<input type="text" name="name" class="form-control" placeholder="Your Name" required>
+							</div>
+							<div class="col-6 mb-3">
+								<input type="email" name="email" class="form-control" placeholder="Your Email" required>
+							</div>
+							<div class="col-12 mb-3">
+								<input type="text" name="subject" class="form-control" placeholder="Subject" required>
+							</div>
+							<div class="col-12 mb-3">
+								<textarea name="message" id="message" cols="30" rows="7" class="form-control"
+									placeholder="Message" required></textarea>
+							</div>
+							<div class="col-12">
+								<input type="submit" value="Send Message" class="btn btn-primary">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div> <!-- /.untree_co-section -->
+
+	<div class="site-footer">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="widget">
+						<h3>About Reliable Travel<span class="text-primary">.</span> </h3>
+						<p>Your trusted partner for unforgettable travel experiences. From spiritual Umrah journeys to
+							exotic destinations worldwide, we deliver personalized service and exceptional value for
+							every adventure.</p>
+					</div> <!-- /.widget -->
+					<div class="widget">
+						<h3>Connect</h3>
+						<ul class="list-unstyled social">
+							<li><a href="https://www.instagram.com/reliable_travels/"><span
+										class="icon-instagram"></span></a></li>
+
+					</div> <!-- /.widget -->
+				</div> <!-- /.col-lg-3 -->
+
+				<div class="col-lg-2 ml-auto">
+					<div class="widget">
+						<h3>Links</h3>
+						<ul class="list-unstyled float-left links">
+							<li><a href="about.html">About us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div> <!-- /.widget -->
+				</div> <!-- /.col-lg-3 -->
+
+				<div class="col-lg-2">
+					<div class="widget">
+						<h3>Company</h3>
+						<ul class="list-unstyled float-left links">
+							<li><a href="about.html">About us</a></li>
+							<li><a href="services.html">Services</a></li>
+
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div> <!-- /.widget -->
+				</div> <!-- /.col-lg-3 -->
+
+
+				<div class="col-lg-3">
+					<div class="widget">
+						<h3>Contact</h3>
+						<address>101 Barkly Road, Gemdene, Kimberley,8301</address>
+						<ul class="list-unstyled links mb-4">
+							<li><a href="tel://+27655730557">+27 65 573 0557</a></li>
+							<li><a href="mailto:info@reliabletravel.co.za">info@reliabletravel.co.za</a></li>
+						</ul>
+					</div> <!-- /.widget -->
+				</div> <!-- /.col-lg-3 -->
+
+			</div> <!-- /.row -->
+
+			<div class="row mt-5">
+				<div class="col-12 text-center">
+					<p class="mb-0">Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+						Designed by <a href="https://randpowerstate.co.za">RANDPOWERSTATE (PTY) LTD</a>
+					</p>
+				</div>
+			</div> <!-- /.container -->
+		</div> <!-- /.site-footer -->
+
+		<!-- Preloader -->
+		<div id="overlayer"></div>
+		<div class="loader">
+			<div class="spinner-border text-primary" role="status">
+				<span class="visually-hidden">Loading...</span>
+			</div>
+		</div>
+
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/aos.js"></script>
+		<script src="js/navbar.js"></script>
+		<script src="js/counter.js"></script>
+		<script src="js/rellax.js"></script>
+		<script src="js/flatpickr.js"></script>
+		<script src="js/glightbox.min.js"></script>
+		<script src="js/custom.js"></script>
+</body>
+
+</html>

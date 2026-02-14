@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Reliable Travels">
+    <link rel="shortcut icon" href="images/reliable_travel.jpeg">
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/tiny-slider.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/flatpickr.min.css">
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .cta-button a {
+            background: linear-gradient(135deg, #f6ad3c 0%, #e59a2b 100%);
+            color: #fff !important;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(246, 173, 60, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button a:hover {
+            background: linear-gradient(135deg, #e59a2b 0%, #d48920 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(246, 173, 60, 0.4);
+        }
+
+        .cta-button a:active {
+            transform: translateY(0);
+        }
+
+        .resource-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .resource-icon {
+            font-size: 48px;
+            color: #f6ad3c;
+            margin-bottom: 20px;
+        }
+
+        .resource-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .resource-description {
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            background: #f6ad3c;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: #e59a2b;
+            color: #fff;
+        }
+
+        .resources-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        /* Instagram Icon Fix */
+        .site-footer .social li a {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 50% !important;
+            background: rgba(246, 173, 60, 0.1) !important;
+            border: 2px solid #f6ad3c !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .site-footer .social li a:hover {
+            background: #f6ad3c !important;
+            transform: scale(1.1) !important;
+        }
+
+        .site-footer .social li a span {
+            font-size: 18px !important;
+            color: #f6ad3c !important;
+        }
+
+        .site-footer .social li a:hover span {
+            color: #fff !important;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .whatsapp-float i {
+            margin-top: 0;
+            color: #FFF;
+        }
+
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 991px) {
+            .heading {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+            }
+
+            h2.heading {
+                font-size: 1.75rem !important;
+            }
+
+            .hero {
+                min-height: 500px !important;
+                padding: 60px 0 !important;
+            }
+
+            .site-nav {
+                padding: 10px 0 !important;
+            }
+
+            .logo {
+                font-size: 1.25rem !important;
+            }
+
+            .cta-button a {
+                padding: 10px 20px !important;
+                font-size: 0.9rem !important;
+            }
+
+            .resources-section {
+                padding: 40px 0 !important;
+            }
+
+            .resource-card {
+                padding: 20px !important;
+                margin-bottom: 20px !important;
+            }
+
+            .resource-icon {
+                font-size: 36px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .resource-title {
+                font-size: 18px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .resource-description {
+                font-size: 14px !important;
+                margin-bottom: 15px !important;
+            }
+
+            .download-btn {
+                padding: 10px 20px !important;
+                font-size: 14px !important;
+                width: 100% !important;
+                justify-content: center !important;
+            }
+
+            .site-footer {
+                padding: 2rem 0 1rem !important;
+            }
+
+            .site-footer .widget {
+                margin-bottom: 2rem !important;
+            }
+
+            .site-footer .widget h3 {
+                font-size: 1.1rem !important;
+                margin-bottom: 0.75rem !important;
+            }
+
+            .site-footer .widget p,
+            .site-footer .widget address,
+            .site-footer .widget li {
+                font-size: 0.9rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .site-footer .col-lg-4,
+            .site-footer .col-lg-2,
+            .site-footer .col-lg-3 {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .site-footer ul.list-unstyled.social li,
+            .site-footer ul.list-unstyled.links li {
+                margin-bottom: 0.5rem !important;
+            }
+
+            .site-footer ul.list-unstyled.social li a,
+            .site-footer ul.list-unstyled.links li a {
+                font-size: 0.9rem !important;
+                padding: 0.25rem 0 !important;
+            }
+
+            .site-footer .row.mt-5 {
+                margin-top: 2rem !important;
+                padding-top: 1rem !important;
+                border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            }
+
+            .site-footer .copyright p {
+                font-size: 0.85rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .container {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            body {
+                overflow-x: hidden !important;
+            }
+
+            .row {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .heading {
+                font-size: 1.5rem !important;
+            }
+
+            h2.heading {
+                font-size: 1.4rem !important;
+            }
+
+            .hero {
+                min-height: 400px !important;
+            }
+
+            .resources-section {
+                padding: 30px 0 !important;
+            }
+
+            .resource-card {
+                padding: 15px !important;
+            }
+
+            .resource-icon {
+                font-size: 32px !important;
+            }
+
+            .resource-title {
+                font-size: 16px !important;
+            }
+
+            .container {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+        }
+    </style>
+
+    <title>Reliable Travels &mdash; Umrah Resources</title>
+</head>
+
+<body>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/27655730557" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i class="icon-whatsapp"></i>
+    </a>
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav mt-3">
+        <div class="container">
+
+            <div class="site-navigation">
+                <div class="row">
+                    <div class="col-6 col-lg-3">
+                        <a href="index.html" class="logo m-0 float-start">Reliable Travel</a>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
+                        <ul class="js-clone-nav  text-center site-menu p-0 m-0">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About us</a></li>
+                            <li class="has-children active">
+                                <a href="#">Umrah</a>
+                                <ul class="dropdown">
+                                    <li><a href="resources.html">Resources</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="blog.html">Destinations</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-6 col-lg-3 text-lg-end">
+                        <ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu ">
+                            <li class="cta-button"><a href="contact.html">Contact Us</a></li>
+                        </ul>
+
+                        <a href="#"
+                            class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+                            data-toggle="collapse" data-target="#main-navbar">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="hero overlay">
+
+        <div class="img-bg rellax">
+            <img src="images/hero_1.jpg" alt="Image" class="img-fluid">
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center justify-content-start">
+                <div class="col-lg-6">
+
+                    <h1 class="heading" data-aos="fade-up">Umrah Resources</h1>
+                    <p class="mb-5" data-aos="fade-up">Download our comprehensive collection of guides, activity books,
+                        and educational materials to help prepare for your spiritual journey. Perfect for both adults
+                        and children.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="resources-section">
+        <div class="container">
+
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="heading mb-3">Download Our Resources</h2>
+                    <p class="text-muted">Click on any resource below to download your free PDF guides</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Hajj & Umrah Guide -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="resource-card">
+                        <div class="resource-icon">📖</div>
+                        <h3 class="resource-title">Hajj & Umrah Book</h3>
+                        <p class="resource-description">A comprehensive guide covering all aspects of Hajj and Umrah
+                            pilgrimage, including rituals, supplications, and practical advice for pilgrims.</p>
+                        <a href="documents/Hajj & Umrah book.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- The Umrah & Haj Guide -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3 class="resource-title">The Umrah & Haj Guide</h3>
+                        <p class="resource-description">Detailed step-by-step instructions by Ml Moosa Olgar on
+                            performing Umrah and Hajj according to Islamic teachings with practical tips.</p>
+                        <a href="documents/The Umrah & Haj guide- Ml Moosa Olgar-2.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Duas for the Contentment of the Heart -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-card">
+                        <div class="resource-icon">🤲</div>
+                        <h3 class="resource-title">Duas for the Contentment of the Heart</h3>
+                        <p class="resource-description">A beautiful collection of supplications (duas) to bring peace
+                            and contentment to your heart during your spiritual journey.</p>
+                        <a href="documents/Duas for the Contentment of the Heart_compressed.pdf" class="download-btn"
+                            download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fazail-e-Hajj -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="resource-card">
+                        <div class="resource-icon">⭐</div>
+                        <h3 class="resource-title">Fazail-e-Hajj</h3>
+                        <p class="resource-description">Learn about the virtues and spiritual benefits of performing
+                            Hajj, including inspiring stories and Islamic teachings.</p>
+                        <a href="documents/fazail-e-hajj.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- In the City of Madinah Munawwarah -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-card">
+                        <div class="resource-icon">🕌</div>
+                        <h3 class="resource-title">In the City of Madinah Munawwarah</h3>
+                        <p class="resource-description">A guide to the blessed city of Madinah, including historical
+                            sites, etiquettes, and what to do during your visit.</p>
+                        <a href="documents/In the City of Madinah Munawwarah.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- How to Perform Umrah with the Heart (Children) -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-card">
+                        <div class="resource-icon">👶</div>
+                        <h3 class="resource-title">How to Perform Umrah with the Heart For Children</h3>
+                        <p class="resource-description">A child-friendly guide teaching young pilgrims about Umrah with
+                            simple explanations and heartfelt guidance.</p>
+                        <a href="documents/How-to-Perform-Umrah-with-the-Heart-For-Children.pdf" class="download-btn"
+                            download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- My Umrah Journal (Females) -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="resource-card">
+                        <div class="resource-icon">📔</div>
+                        <h3 class="resource-title">My Umrah Journal (Females)</h3>
+                        <p class="resource-description">A special journal for sisters to document their Umrah
+                            experience, record reflections, and preserve precious memories.</p>
+                        <a href="documents/My Umrah Journal females v1.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Booklet for Boys -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-card">
+                        <div class="resource-icon">👦</div>
+                        <h3 class="resource-title">Booklet for Boys</h3>
+                        <p class="resource-description">Educational booklet designed specifically for boys, featuring
+                            activities, lessons, and guidance for young male pilgrims.</p>
+                        <a href="documents/Booklet-Boys-Nov2023.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Booklet for Girls -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-card">
+                        <div class="resource-icon">👧</div>
+                        <h3 class="resource-title">Booklet for Girls</h3>
+                        <p class="resource-description">Educational booklet designed specifically for girls, featuring
+                            activities, lessons, and guidance for young female pilgrims.</p>
+                        <a href="documents/Booklet-Girls-Nov2023.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- My Umrah Colouring Book -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="resource-card">
+                        <div class="resource-icon">🎨</div>
+                        <h3 class="resource-title">My Umrah Colouring Book</h3>
+                        <p class="resource-description">Fun and educational colouring pages about Umrah for children to
+                            learn while being creative and entertained.</p>
+                        <a href="documents/My Umrah colouring book v1.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- My Madinah Colouring Book -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-card">
+                        <div class="resource-icon">🖍️</div>
+                        <h3 class="resource-title">My Madinah Colouring Book</h3>
+                        <p class="resource-description">Beautiful colouring pages featuring scenes and landmarks from
+                            the blessed city of Madinah for children.</p>
+                        <a href="documents/My Madinah Colouring Book_A5.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Allah Made Everything Colouring Book -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-card">
+                        <div class="resource-icon">🌈</div>
+                        <h3 class="resource-title">Allah Made Everything Colouring Book</h3>
+                        <p class="resource-description">Teach children about Allah's creation through engaging colouring
+                            activities featuring nature, animals, and more.</p>
+                        <a href="documents/Allah-made-everything-colouring-book.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Arabic Alphabet Colouring Pages -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="resource-card">
+                        <div class="resource-icon">🔤</div>
+                        <h3 class="resource-title">Arabic Alphabet Colouring Pages</h3>
+                        <p class="resource-description">Help children learn the Arabic alphabet through fun colouring
+                            activities, perfect for young learners.</p>
+                        <a href="documents/arabic-alphabet-colouring-pages.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Islamic Months Colouring Book -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-card">
+                        <div class="resource-icon">📅</div>
+                        <h3 class="resource-title">Islamic Months Colouring Book</h3>
+                        <p class="resource-description">Learn about the Islamic calendar and the significance of each
+                            month through interactive colouring pages.</p>
+                        <a href="documents/islamic months coluring book.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Free Umrah Flashcards -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="resource-card">
+                        <div class="resource-icon">🃏</div>
+                        <h3 class="resource-title">Free Umrah Flashcards</h3>
+                        <p class="resource-description">Printable flashcards to help children and adults memorize
+                            important Umrah rituals, duas, and vocabulary.</p>
+                        <a href="documents/free umrah flashcards.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Wordsearch Pack -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="resource-card">
+                        <div class="resource-icon">🔍</div>
+                        <h3 class="resource-title">Wordsearch Pack</h3>
+                        <p class="resource-description">Fun and educational word search puzzles about Umrah, Hajj, and
+                            Islamic concepts for the whole family.</p>
+                        <a href="documents/Wordsearch pack final.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Parent Consent Form -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="resource-card">
+                        <div class="resource-icon">📝</div>
+                        <h3 class="resource-title">Parent Consent Form</h3>
+                        <p class="resource-description">Required consent form for parents whose children will be
+                            traveling for Umrah. Please complete and submit before travel.</p>
+                        <a href="documents/PARENT CONSENT FORM.pdf" class="download-btn" download>
+                            <span class="icon-download"></span> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="widget">
+                        <h3>About Reliable Travels<span class="text-primary">.</span> </h3>
+                        <p>Your trusted partner for unforgettable travel experiences. From spiritual Umrah journeys to
+                            exotic destinations worldwide, we provide exceptional service and personalized care for
+                            every traveler.</p>
+                    </div> <!-- /.widget -->
+                    <div class="widget">
+                        <h3>Connect</h3>
+                        <ul class="list-unstyled social">
+                            <li><a href="https://www.instagram.com/reliable_travels/"><span
+                                        class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div> <!-- /.widget -->
+                </div> <!-- /.col-lg-3 -->
+
+                <div class="col-lg-2 ml-auto">
+                    <div class="widget">
+                        <h3>Links</h3>
+                        <ul class="list-unstyled float-left links">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div> <!-- /.widget -->
+                </div> <!-- /.col-lg-3 -->
+
+                <div class="col-lg-2">
+                    <div class="widget">
+                        <h3>Company</h3>
+                        <ul class="list-unstyled float-left links">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div> <!-- /.widget -->
+                </div> <!-- /.col-lg-3 -->
+
+
+                <div class="col-lg-3">
+                    <div class="widget">
+                        <h3>Contact</h3>
+                        <ul class="list-unstyled links mb-4">
+                            <address>101 Barkly Road, Gemdene, Kimberley,8301</address>
+                            <li><a href="tel://+27655730557">+27 65 573 0557</a></li>
+                            <li><a href="mailto:info@reliabletravel.co.za">info@reliabletravel.co.za</a></li>
+                        </ul>
+                    </div> <!-- /.widget -->
+                </div> <!-- /.col-lg-3 -->
+
+            </div> <!-- /.row -->
+
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+                        Designed by <a href="https://randpowerstate.co.za">RANDPOWERSTATE (PTY) LTD</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/rellax.js"></script>
+    <script src="js/flatpickr.js"></script>
+    <script src="js/glightbox.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

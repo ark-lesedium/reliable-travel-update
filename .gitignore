@@ -1,0 +1,6 @@
+documents_original/
+venv/
+compress_pdfs.py
+compress_pdfs_gs.py
+*.pyc
+__pycache__/
