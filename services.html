@@ -1,0 +1,749 @@
+<!-- /*
+* Template Name: Sterial
+* Template Author: Untree.co
+* Tempalte URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="author" content="Reliable Travels">
+	<link rel="shortcut icon" href="images/reliable_travel.jpeg">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;700&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		.cta-button a {
+			background: linear-gradient(135deg, #f6ad3c 0%, #e59a2b 100%);
+			color: #fff !important;
+			padding: 12px 28px;
+			border-radius: 30px;
+			font-weight: 600;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(246, 173, 60, 0.3);
+			letter-spacing: 0.5px;
+		}
+
+		.cta-button a:hover {
+			background: linear-gradient(135deg, #e59a2b 0%, #d48920 100%);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(246, 173, 60, 0.4);
+		}
+
+		.cta-button a:active {
+			transform: translateY(0);
+		}
+
+		/* Instagram Icon Fix */
+		.site-footer .social li a {
+			display: inline-flex !important;
+			align-items: center !important;
+			justify-content: center !important;
+			width: 40px !important;
+			height: 40px !important;
+			border-radius: 50% !important;
+			background: rgba(246, 173, 60, 0.1) !important;
+			border: 2px solid #f6ad3c !important;
+			transition: all 0.3s ease !important;
+		}
+
+		.site-footer .social li a:hover {
+			background: #f6ad3c !important;
+			transform: scale(1.1) !important;
+		}
+
+
+		.site-footer .social li a span {
+			font-size: 18px !important;
+			color: #f6ad3c !important;
+		}
+
+		.site-footer .social li a:hover span {
+			color: #fff !important;
+		}
+
+		/* WhatsApp Floating Button */
+		.whatsapp-float {
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 30px;
+			right: 30px;
+			background-color: #25d366;
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+			z-index: 1000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s ease;
+			text-decoration: none;
+		}
+
+		.whatsapp-float:hover {
+			background-color: #128c7e;
+			transform: scale(1.1);
+			box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+		}
+
+		.whatsapp-float i {
+			margin-top: 0;
+			color: #FFF;
+		}
+
+		@media (max-width: 768px) {
+			.whatsapp-float {
+				width: 50px;
+				height: 50px;
+				font-size: 26px;
+				bottom: 20px;
+				right: 20px;
+			}
+		}
+
+		/* Mobile Optimizations */
+		@media (max-width: 991px) {
+			.heading {
+				font-size: 2rem !important;
+				line-height: 1.3 !important;
+			}
+
+			h2.heading {
+				font-size: 1.75rem !important;
+			}
+
+			h3 {
+				font-size: 1.25rem !important;
+			}
+
+			p {
+				font-size: 1rem !important;
+				line-height: 1.6 !important;
+			}
+
+			.hero {
+				min-height: 500px !important;
+				padding: 60px 0 !important;
+			}
+
+			.hero .heading {
+				font-size: 1.75rem !important;
+				margin-bottom: 1rem !important;
+			}
+
+			.site-nav {
+				padding: 10px 0 !important;
+			}
+
+			.logo {
+				font-size: 1.25rem !important;
+			}
+
+			.cta-button a {
+				padding: 10px 20px !important;
+				font-size: 0.9rem !important;
+			}
+
+			.section {
+				padding: 3rem 0 !important;
+			}
+
+			.image-stack {
+				margin-bottom: 2rem !important;
+			}
+
+			img {
+				max-width: 100% !important;
+				height: auto !important;
+			}
+
+			.service-1 {
+				margin-bottom: 2rem !important;
+				padding: 1.5rem !important;
+			}
+
+			.btn {
+				padding: 12px 24px !important;
+				font-size: 0.95rem !important;
+				width: 100% !important;
+				margin-bottom: 1rem !important;
+			}
+
+			.block-testimonial {
+				padding: 2rem 1rem !important;
+			}
+
+			.accordion-button {
+				padding: 1rem !important;
+				font-size: 1rem !important;
+			}
+
+			.site-footer {
+				padding: 2rem 0 1rem !important;
+			}
+
+			.site-footer .widget {
+				margin-bottom: 2rem !important;
+			}
+
+			.site-footer .widget h3 {
+				font-size: 1.1rem !important;
+				margin-bottom: 0.75rem !important;
+			}
+
+			.site-footer .widget p,
+			.site-footer .widget address,
+			.site-footer .widget li {
+				font-size: 0.9rem !important;
+				line-height: 1.5 !important;
+				margin-bottom: 0.5rem !important;
+			}
+
+			.site-footer .col-lg-4,
+			.site-footer .col-lg-2,
+			.site-footer .col-lg-3 {
+				margin-bottom: 1.5rem !important;
+			}
+
+			.site-footer ul.list-unstyled.social li,
+			.site-footer ul.list-unstyled.links li {
+				margin-bottom: 0.5rem !important;
+			}
+
+			.site-footer ul.list-unstyled.social li a,
+			.site-footer ul.list-unstyled.links li a {
+				font-size: 0.9rem !important;
+				padding: 0.25rem 0 !important;
+			}
+
+			.site-footer .row.mt-5 {
+				margin-top: 2rem !important;
+				padding-top: 1rem !important;
+				border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+			}
+
+			.site-footer .copyright p {
+				font-size: 0.85rem !important;
+				margin-bottom: 0.5rem !important;
+			}
+
+			.container {
+				padding-left: 20px !important;
+				padding-right: 20px !important;
+			}
+
+			body {
+				overflow-x: hidden !important;
+			}
+
+			.row {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+
+			a,
+			button {
+				min-height: 44px !important;
+				display: inline-flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.heading {
+				font-size: 1.5rem !important;
+			}
+
+			h2.heading {
+				font-size: 1.4rem !important;
+			}
+
+			.hero {
+				min-height: 400px !important;
+			}
+
+			.section {
+				padding: 2rem 0 !important;
+			}
+
+			.container {
+				padding-left: 15px !important;
+				padding-right: 15px !important;
+			}
+
+			.cta-button a {
+				padding: 10px 18px !important;
+				font-size: 0.85rem !important;
+			}
+		}
+	</style>
+
+	<title>Reliable Travels &mdash; Travels Agency </title>
+</head>
+
+<body>
+
+	<!-- WhatsApp Floating Button -->
+	<a href="https://wa.me/27655730557" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+		aria-label="Chat on WhatsApp">
+		<i class="icon-whatsapp"></i>
+	</a>
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav mt-3">
+		<div class="container">
+
+			<div class="site-navigation">
+				<div class="row">
+					<div class="col-6 col-lg-3">
+						<a href="index.html" class="logo m-0 float-start">Reliable Travel</a>
+					</div>
+					<div class="col-lg-6 d-none d-lg-inline-block text-center nav-center-wrap">
+						<ul class="js-clone-nav  text-center site-menu p-0 m-0">
+							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="about.html">About us</a></li>
+							<li class="has-children">
+								<a href="#">Umrah</a>
+								<ul class="dropdown">
+									<li><a href="resources.html">Resources</a></li>
+								</ul>
+							</li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="blog.html">Destinations</a></li>
+
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 text-lg-end">
+						<ul class="js-clone-nav d-none d-lg-inline-block text-end site-menu ">
+							<li class="cta-button"><a href="contact.html">Contact Us</a></li>
+						</ul>
+
+						<a href="#"
+							class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+							data-toggle="collapse" data-target="#main-navbar">
+							<span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+
+
+	<div class="hero overlay">
+
+		<div class="img-bg rellax">
+			<img src="images/hero_2.jpg" alt="Image" class="img-fluid">
+		</div>
+		<div class="container">
+			<div class="row align-items-center justify-content-start">
+				<div class="col-lg-5">
+
+					<h1 class="heading" data-aos="fade-up">Services</h1>
+					<p class="mb-5" data-aos="fade-up">Discover our comprehensive range of travel services designed to
+						make your journey seamless and unforgettable. From spiritual Umrah experiences to exotic holiday
+						destinations, we provide end-to-end solutions tailored to your needs.</p>
+
+					<div data-aos="fade-up">
+						<a href="https://www.youtube.com/watch?v=5n-e6lOhVq0"
+							class="play-button align-items-center d-flex glightbox3">
+
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+	<div class="section service-section-1">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 mb-4 mb-lg-0">
+					<div class="heading-content" data-aos="fade-up">
+						<h2>Featured <span class="d-block">Services</span></h2>
+						<p>Comprehensive travel solutions tailored to meet all your journey needs, from spiritual
+							pilgrimages to dream vacations.</p>
+						<p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="contact.html"
+								class="btn btn-primary">Get a Quote</a></p>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="row">
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/01.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Umrah Packages</h3>
+									<p>Comprehensive Umrah packages including flights, accommodation near Haram, guided
+										tours, and visa assistance for a spiritually fulfilling journey.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/02.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Custom Tours</h3>
+									<p>Personalized itineraries designed around your interests, budget, and schedule.
+										From beach getaways to cultural explorations worldwide.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/03.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Travel Insurance</h3>
+									<p>Comprehensive coverage for medical emergencies, trip cancellations, lost luggage,
+										and more. Travel with complete peace of mind.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="400">
+							<div class="service-1">
+								<span class="icon">
+									<img src="images/svg/04.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Visa Assistance</h3>
+									<p>Expert guidance through visa applications, documentation preparation, and embassy
+										liaison for hassle-free travel authorization.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 mb-4 mb-lg-0">
+					<div class="heading-content" data-aos="fade-up">
+						<h2>Additional <span class="d-block">Services</span></h2>
+						<p>Explore our complete range of travel services designed to support every aspect of your
+							journey, ensuring a seamless experience from start to finish.</p>
+						<p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="contact.html"
+								class="btn btn-primary">Contact Us</a></p>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<div class="row">
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="100">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/01.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Flight Bookings</h3>
+									<p>Access competitive rates on domestic and international flights with flexible
+										scheduling options to suit your travel plans.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="200">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/02.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Hotel Reservations</h3>
+									<p>Carefully selected accommodations ranging from budget-friendly options to luxury
+										properties at prime locations worldwide.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="300">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/03.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Airport Transfers</h3>
+									<p>Reliable ground transportation services ensuring smooth transfers between
+										airports, hotels, and key destinations.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="400">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/04.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Travel Documentation</h3>
+									<p>Complete assistance with passports, travel permits, health certificates, and all
+										necessary documentation for international travel.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="100">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/01.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Group Travel</h3>
+									<p>Specialized packages for families, corporate groups, and large parties with
+										coordinated logistics and group discounts.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="200">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/02.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Tour Guides</h3>
+									<p>Knowledgeable local guides providing insightful cultural experiences and ensuring
+										you discover hidden gems at every destination.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="300">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/03.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>24/7 Support</h3>
+									<p>Round-the-clock customer support available via phone, email, or WhatsApp to
+										assist you throughout your journey.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-md-6 col-lg-3 mb-4 mb-lg-0 text-center" data-aos="fade-up"
+							data-aos-delay="400">
+							<div class="service-1 left-0 mb-5">
+								<span class="icon">
+									<img src="images/svg/04.svg" alt="Image" class="img-fluid">
+								</span>
+								<div>
+									<h3>Travel Consultancy</h3>
+									<p>Expert advice on destinations, best travel times, budgeting, and itinerary
+										planning to maximize your travel experience.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-lg-6 mx-auto text-center">
+						<div class="heading-content" data-aos="fade-up">
+							<h2>Premium Travel Experiences</h2>
+							<p>Elevate your journey with our exclusive services designed for discerning travelers
+								seeking comfort, convenience, and unforgettable moments.</p>
+							<p class="my-4" data-aos="fade-up" data-aos-delay="300"><a href="contact.html"
+									class="btn btn-primary">Request Details</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="service-2 left-0 mb-5">
+							<img src="images/gal_5.jpg" alt="Image" class="img-fluid mb-4 rounded">
+							<div>
+								<h3>Luxury Cruise Packages</h3>
+								<p>Experience the ultimate maritime adventure with all-inclusive cruise packages
+									featuring world-class amenities, fine dining, and breathtaking ocean views.</p>
+								<p><a href="contact.html" class="more">Learn More</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="service-2 left-0 mb-5">
+							<img src="images/gal_6.jpg" alt="Image" class="img-fluid mb-4 rounded">
+							<div>
+								<h3>Honeymoon Specials</h3>
+								<p>Create unforgettable romantic memories with our curated honeymoon packages to exotic
+									destinations, complete with special perks and intimate experiences.</p>
+								<p><a href="contact.html" class="more">Learn More</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="service-2 left-0 mb-5">
+							<img src="images/gal_3.jpg" alt="Image" class="img-fluid mb-4 rounded">
+							<div>
+								<h3>Adventure Tourism</h3>
+								<p>For thrill-seekers and nature lovers, we offer exciting adventure packages including
+									safaris, hiking expeditions, and water sports activities worldwide.</p>
+								<p><a href="contact.html" class="more">Learn More</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="service-2 left-0 mb-5">
+							<img src="images/gal_4.jpg" alt="Image" class="img-fluid mb-4 rounded">
+							<div>
+								<h3>Corporate Retreats</h3>
+								<p>Strengthen team bonds with professionally organized corporate travel experiences,
+									including conferences, team-building activities, and executive getaways.</p>
+								<p><a href="contact.html" class="more">Learn More</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<div class="site-footer">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="widget">
+							<h3>About Reliable Travel<span class="text-primary">.</span></h3>
+							<p>Reliable Travel is a licensed travel agency providing Umrah packages, flight and hotel
+								bookings, visa assistance, and 24/7 customer support to ensure a smooth and memorable
+								journey.</p>
+						</div> <!-- /.widget -->
+						<div class="widget">
+							<h3>Connect</h3>
+							<ul class="list-unstyled social">
+								<li><a href="https://www.instagram.com/reliable_travels/"><span
+											class="icon-instagram"></span></a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+					<div class="col-lg-2 ml-auto">
+						<div class="widget">
+							<h3>Links</h3>
+							<ul class="list-unstyled float-left links">
+								<li><a href="about.html">About us</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+					<div class="col-lg-2">
+						<div class="widget">
+							<h3>Company</h3>
+							<ul class="list-unstyled float-left links">
+								<li><a href="about.html">About us</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+
+					<div class="col-lg-3">
+						<div class="widget">
+							<h3>Contact</h3>
+							<ul class="list-unstyled links mb-4">
+								<address>101 Barkly Road, Gemdene, Kimberley,8301</address>
+								<li><a href="tel://+27655730557">+27 65 573 0557</a></li>
+								<li><a href="mailto:info@reliabletravel.co.za">info@reliabletravel.co.za</a></li>
+							</ul>
+						</div> <!-- /.widget -->
+					</div> <!-- /.col-lg-3 -->
+
+				</div> <!-- /.row -->
+
+				<div class="row mt-5">
+					<div class="col-12 text-center">
+						<p class="mb-0">Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+							Designed by <a href="https://randpowerstate.co.za">RANDPOWERSTATE (PTY) LTD</a>
+						</p>
+					</div>
+				</div> <!-- /.container -->
+			</div> <!-- /.site-footer -->
+
+			<!-- Preloader -->
+			<div id="overlayer"></div>
+			<div class="loader">
+				<div class="spinner-border text-primary" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
+
+
+			<script src="js/bootstrap.bundle.min.js"></script>
+			<script src="js/tiny-slider.js"></script>
+			<script src="js/aos.js"></script>
+			<script src="js/navbar.js"></script>
+			<script src="js/counter.js"></script>
+			<script src="js/rellax.js"></script>
+			<script src="js/flatpickr.js"></script>
+			<script src="js/glightbox.min.js"></script>
+			<script src="js/custom.js"></script>
+</body>
+
+</html>
